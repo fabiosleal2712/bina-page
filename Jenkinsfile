@@ -12,12 +12,16 @@ pipeline {
             steps {
                 withCredentials([sshUserPrivateKey(credentialsId: 'SSH_PRIVATE_KEY', keyFileVariable: 'SSH_PRIVATE_KEY')]) {
                     sh '''
+                    echo "Conteúdo da Chave Privada:"
+                    echo "${SSH_PRIVATE_KEY}"
+
                     ssh -o StrictHostKeyChecking=no -i "$SSH_PRIVATE_KEY" ubuntu@34.239.160.25 " 
                         # Seus comandos para aplicar dados do usuário aqui
                         mkdir -p /home/ubuntu/bina-page
                         cd /home/ubuntu/bina-page
                         docker-compose down
                     "
+
                     '''
                 }
             }
