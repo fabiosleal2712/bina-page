@@ -12,8 +12,9 @@ pipeline {
             steps {
                 withCredentials([string(credentialsId: '4713449b-a476-429a-afe4-f0bec4086c9a', variable: 'SSH_PUBLIC_KEY')]) {
                     sh '''
-                    ssh -o StrictHostKeyChecking=no ec2-user@54.226.133.72 " 
+                    ssh -o StrictHostKeyChecking=no ec2-user@34.239.160.25 " 
                         # Your commands for applying user data here
+                        mkdir -p /home/ec2-user/bina-page
                         cd /home/ec2-user/bina-page
                         docker-compose down
                     "
@@ -25,7 +26,7 @@ pipeline {
             steps {
                 withCredentials([string(credentialsId: '4713449b-a476-429a-afe4-f0bec4086c9a', variable: 'SSH_PUBLIC_KEY')]) {
                     sh '''
-                    ssh -o StrictHostKeyChecking=no ec2-user@54.226.133.72 " 
+                    ssh -o StrictHostKeyChecking=no ec2-user@34.239.160.25 " 
                         # Your commands for applying user data here
                         cd /home/ec2-user/
                         git clone https://github.com/fabiosleal2712/bina-page.git || true
@@ -41,7 +42,7 @@ pipeline {
             steps {
                 withCredentials([string(credentialsId: '4713449b-a476-429a-afe4-f0bec4086c9a', variable: 'SSH_PUBLIC_KEY')]) {
                     sh '''
-                    ssh -o StrictHostKeyChecking=no ec2-user@54.226.133.72 " 
+                    ssh -o StrictHostKeyChecking=no ec2-user@34.239.160.25 " 
                         # Your commands for applying user data here
                         cd /home/ec2-user/bina-page
                         docker-compose up -d
