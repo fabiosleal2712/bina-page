@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         // Substitua 'id-da-credencial' pelo ID real da sua credencial no Jenkins
-        SSH_PRIVATE_KEY = credentials('7f228755-13d9-42fc-825d-c3b82ce0fd76')
+        SSH_PRIVATE_KEY = credentials('8eb542f2-2539-4599-a538-299aff14f21c')
     }
 
     stages {
