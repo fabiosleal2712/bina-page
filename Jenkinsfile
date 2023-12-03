@@ -12,10 +12,10 @@ pipeline {
             steps {
                 withCredentials([string(credentialsId: '4713449b-a476-429a-afe4-f0bec4086c9a', variable: 'SSH_PUBLIC_KEY')]) {
                     sh '''
-                    ssh -o StrictHostKeyChecking=no ec2-user@34.239.160.25 " 
+                    ssh -o StrictHostKeyChecking=no ubuntu@34.239.160.25 " 
                         # Your commands for applying user data here
-                        mkdir -p /home/ec2-user/bina-page
-                        cd /home/ec2-user/bina-page
+                        mkdir -p /home/ubuntu/bina-page
+                        cd /home/ubuntu/bina-page
                         docker-compose down
                     "
                     '''
@@ -26,11 +26,11 @@ pipeline {
             steps {
                 withCredentials([string(credentialsId: '4713449b-a476-429a-afe4-f0bec4086c9a', variable: 'SSH_PUBLIC_KEY')]) {
                     sh '''
-                    ssh -o StrictHostKeyChecking=no ec2-user@34.239.160.25 " 
+                    ssh -o StrictHostKeyChecking=no ubuntu@34.239.160.25 " 
                         # Your commands for applying user data here
-                        cd /home/ec2-user/
+                        cd /home/ubuntu/
                         git clone https://github.com/fabiosleal2712/bina-page.git || true
-                        cd /home/ec2-user/bina-page
+                        cd /home/ubuntu/bina-page
                         git pull
                     "
                     '''
@@ -42,9 +42,9 @@ pipeline {
             steps {
                 withCredentials([string(credentialsId: '4713449b-a476-429a-afe4-f0bec4086c9a', variable: 'SSH_PUBLIC_KEY')]) {
                     sh '''
-                    ssh -o StrictHostKeyChecking=no ec2-user@34.239.160.25 " 
+                    ssh -o StrictHostKeyChecking=no ubuntu@34.239.160.25 " 
                         # Your commands for applying user data here
-                        cd /home/ec2-user/bina-page
+                        cd /home/ubuntu/bina-page
                         docker-compose up -d
                     "
                     '''
