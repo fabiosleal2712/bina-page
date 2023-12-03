@@ -45,8 +45,6 @@ pipeline {
                         # Your commands for applying user data here
                         cd /home/ec2-user/bina-page
                         docker-compose up -d
-
-
                     "
                     '''
                 }

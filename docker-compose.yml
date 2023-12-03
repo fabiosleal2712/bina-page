@@ -8,6 +8,8 @@ services:
       - "443:443"
     volumes:
       - ./pagebina:/usr/share/nginx/html
+      - /etc/letsencrypt/live/binariosolucoes.com.br/fullchain.pem:/etc/ssl/certs/fullchain.pem:ro
+      - /etc/letsencrypt/live/binariosolucoes.com.br/privkey.pem:/etc/ssl/private/privkey.pem:ro
     # Adicione volumes adicionais conforme necessário para configurar Nginx ou outros serviços
 
   # Adicione outros serviços conforme necessário
