@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        // Substitua 'id-da-credencial' pelo ID real da sua credencial no Jenkins
+        // Substitua 'id-da-credencial' pelo D real da sua credencial no Jenkins
         SSH_PRIVATE_KEY = credentials('8eb542f2-2539-4599-a538-299aff14f21c')
     }
 
