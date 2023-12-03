@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Seu Site</title>
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <img class="watermark" src="img/watermark.png" alt="Marca d'água">
+            <img class="logo" src="img/logo.png" alt="Sua Logo">
+            <nav>
+                <ul>
+                    <li><a href="#methodology">Metodologia</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#experts">Especialistas</a></li>
+                    <li><a href="#testimonials">Depoimentos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="portfolio">
+        <h2>Portfolio</h2>
+        <img src="img/portfolio-image.jpg" alt="Imagem do Portfólio">
+        <p>Texto sobre o portfólio. Descreva seus projetos e realizações aqui.</p>
+    </section>
+
+    <section id="experts">
+        <h2>Especialistas</h2>
+        <div class="expert">
+            <img src="img/expert1.jpg" alt="Especialista 1">
+            <p>Texto sobre o Especialista 1. Descreva suas habilidades e experiência.</p>
+        </div>
+        <div class="expert">
+            <img src="img/expert2.jpg" alt="Especialista 2">
+            <p>Texto sobre o Especialista 2. Descreva suas habilidades e experiência.</p>
+        </div>
+        <!-- Adicione mais especialistas conforme necessário -->
+    </section>
+
+    <section id="testimonials">
+        <h2>Depoimentos</h2>
+        <div class="testimonial">
+            <img src="img/client1-logo.png" alt="Logo do Cliente 1" onclick="window.location.href='https://www.cliente1.com'">
+            <p>Depoimento do Cliente 1. O que eles têm a dizer sobre nós.</p>
+        </div>
+        <div class="testimonial">
+            <img src="img/client2-logo.png" alt="Logo do Cliente 2" onclick="window.location.href='https://www.cliente2.com'">
+            <p>Depoimento do Cliente 2. O que eles têm a dizer sobre nós.</p>
+        </div>
+        <div class="testimonial">
+            <img src="img/client3-logo.png" alt="Logo do Cliente 3" onclick="window.location.href='https://www.cliente3.com'">
+            <p>Depoimento do Cliente 3. O que eles têm a dizer sobre nós.</p>
+        </div>
+    </section>
+
+    <section id="methodology">
+        <h2>Metodologia</h2>
+        <img src="img/methodology-image.jpg" alt="Imagem da Metodologia">
+        <p>Texto sobre a metodologia. Explique o processo e abordagens utilizadas.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contato</h2>
+        <form action="processar-formulario.php" method="post">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="assunto">Assunto:</label>
+            <input type="text" id="assunto" name="assunto" required>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+</body>
+</html>
