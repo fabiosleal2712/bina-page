@@ -3,17 +3,17 @@ pipeline {
 
     environment {
         // Substitua 'id-da-credencial' pelo ID real da sua credencial no Jenkins
-        SSH_PUBLIC_KEY = credentials('18933e5f-ca4d-4751-a118-29381470793f')
+        SSH_PRIVATE_KEY = credentials('PRIVATE_KEY_SSH_EC2')
     }
 
     stages {
 
         stage('Docker DOWN') {
             steps {
-                withCredentials([string(credentialsId: '4713449b-a476-429a-afe4-f0bec4086c9a', variable: 'SSH_PUBLIC_KEY')]) {
+                withCredentials([string(credentialsId: '4713449b-a476-429a-afe4-f0bec4086c9a', variable: 'SSH_PRIVATE_KEY')]) {
                     sh '''
-                    ssh -o StrictHostKeyChecking=no ubuntu@34.239.160.25 " 
-                        # Your commands for applying user data here
+                    ssh -o StrictHostKeyChecking=no -i "$SSH_PRIVATE_KEY" ubuntu@34.239.160.25 " 
+                        # Seus comandos para aplicar dados do usuário aqui
                         mkdir -p /home/ubuntu/bina-page
                         cd /home/ubuntu/bina-page
                         docker-compose down
@@ -22,12 +22,13 @@ pipeline {
                 }
             }
         }
-        stage('clone git') {
+
+        stage('Clone Git') {
             steps {
-                withCredentials([string(credentialsId: '4713449b-a476-429a-afe4-f0bec4086c9a', variable: 'SSH_PUBLIC_KEY')]) {
+                withCredentials([string(credentialsId: '4713449b-a476-429a-afe4-f0bec4086c9a', variable: 'SSH_PRIVATE_KEY')]) {
                     sh '''
-                    ssh -o StrictHostKeyChecking=no ubuntu@34.239.160.25 " 
-                        # Your commands for applying user data here
+                    ssh -o StrictHostKeyChecking=no -i "$SSH_PRIVATE_KEY" ubuntu@34.239.160.25 " 
+                        # Seus comandos para aplicar dados do usuário aqui
                         cd /home/ubuntu/
                         git clone https://github.com/fabiosleal2712/bina-page.git || true
                         cd /home/ubuntu/bina-page
@@ -40,10 +41,10 @@ pipeline {
 
         stage('Docker UP') {
             steps {
-                withCredentials([string(credentialsId: '4713449b-a476-429a-afe4-f0bec4086c9a', variable: 'SSH_PUBLIC_KEY')]) {
+                withCredentials([string(credentialsId: '4713449b-a476-429a-afe4-f0bec4086c9a', variable: 'SSH_PRIVATE_KEY')]) {
                     sh '''
-                    ssh -o StrictHostKeyChecking=no ubuntu@34.239.160.25 " 
-                        # Your commands for applying user data here
+                    ssh -o StrictHostKeyChecking=no -i "$SSH_PRIVATE_KEY" ubuntu@34.239.160.25 " 
+                        # Seus comandos para aplicar dados do usuário aqui
                         cd /home/ubuntu/bina-page
                         docker-compose up -d
                     "
