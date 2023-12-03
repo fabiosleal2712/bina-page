@@ -10,7 +10,7 @@ pipeline {
 
         stage('Docker DOWN') {
             steps {
-                withCredentials([string(credentialsId: variable: 'SSH_PRIVATE_KEY')]) {
+                withCredentials([sshUserPrivateKey(credentialsId: 'SSH_PRIVATE_KEY', keyFileVariable: 'SSH_PRIVATE_KEY')]) {
                     sh '''
                     ssh -o StrictHostKeyChecking=no -i "$SSH_PRIVATE_KEY" ubuntu@34.239.160.25 " 
                         # Seus comandos para aplicar dados do usuário aqui
@@ -25,7 +25,7 @@ pipeline {
 
         stage('Clone Git') {
             steps {
-                withCredentials([string(credentialsId: variable: 'SSH_PRIVATE_KEY')]) {
+                withCredentials([sshUserPrivateKey(credentialsId: 'SSH_PRIVATE_KEY', keyFileVariable: 'SSH_PRIVATE_KEY')]) {
                     sh '''
                     ssh -o StrictHostKeyChecking=no -i "$SSH_PRIVATE_KEY" ubuntu@34.239.160.25 " 
                         # Seus comandos para aplicar dados do usuário aqui
@@ -41,7 +41,7 @@ pipeline {
 
         stage('Docker UP') {
             steps {
-                withCredentials([string(credentialsId: variable: 'SSH_PRIVATE_KEY')]) {
+                withCredentials([sshUserPrivateKey(credentialsId: 'SSH_PRIVATE_KEY', keyFileVariable: 'SSH_PRIVATE_KEY')]) {
                     sh '''
                     ssh -o StrictHostKeyChecking=no -i "$SSH_PRIVATE_KEY" ubuntu@34.239.160.25 " 
                         # Seus comandos para aplicar dados do usuário aqui
