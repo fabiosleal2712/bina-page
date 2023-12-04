@@ -10,7 +10,7 @@ pipeline {
                         sh '''
                         ssh -o StrictHostKeyChecking=no -i "$SSH_PRIVATE_KEY" ubuntu@54.175.83.167 " 
                             # Seus comandos para aplicar dados do usuário aqui
-                            mkdir -p /home/ubuntu/bina-page
+                            git clone https://github.com/fabiosleal2712/bina-page.git || true
                             cd /home/ubuntu/bina-page
                             docker-compose down
                         "
