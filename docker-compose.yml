@@ -12,4 +12,4 @@ services:
       - /etc/letsencrypt/live/binariosolucoes.com.br/privkey.pem:/etc/ssl/private/privkey.pem:ro
     # Adicione volumes adicionais conforme necessário para configurar Nginx ou outros serviços
 
-  # Adicione outros serviços conforme necessário
+  # Adicione outros serviços conforme necessário.
