@@ -1,7 +1,7 @@
-/* Adicione este bloco ao seu arquivo styles.css */
+/* Estilos para o cabeçalho */
 header {
-    background-color: #333;
-    padding: 10px 20px; /* Ajuste o padding conforme necessário */
+    background-color: #06090c;
+    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -14,10 +14,12 @@ header {
     width: 100%;
 }
 
+/* Estilos para a logo */
 .logo {
-    width: 150px; /* Ajuste o tamanho da logo conforme necessário */
+    width: 150px;
 }
 
+/* Estilos para a navegação */
 nav {
     text-align: right;
 }
@@ -40,92 +42,155 @@ nav ul li a {
     font-size: 18px;
 }
 
-/* Restante do seu CSS... */
-
-section {
-    padding: 50px 20px;
-    background-color: rgb(23, 15, 43);
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+body {
+    background-color: #12181d; /* Fundo azul escuro */
+    margin: 0; /* Remove margens padrão do body */
 }
 
-h2 {
-    color: #ffffff;
+
+/* Adicionando Media Queries para responsividade */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
 }
 
-/* Adicionando um efeito de rolar suave */
-html {
-    scroll-behavior: smooth;
+/* Adicionando Media Queries para responsividade */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        text-align: right;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
 }
 
-/* Estilizando links ativos no menu */
-nav ul li a:hover,
-nav ul li a:active {
-    color: #1b0bfd;
-}
-
-/* Estilo para a seção de Especialistas */
-.expert {
+/* Estilos para a intro-text */
+.intro-text {
+    background-color: #285f8b; /* Fundo rosa pálido */
     text-align: center;
-    margin-bottom: 20px;
+    padding: 50px; /* Espaçamento interno de 20px em todas as direções */
+    opacity: 0;
+    animation: slideUp 1s ease-in-out 0.5s forwards;
+    border-radius: 15px; /* Adiciona cantos arredondados à caixa com um raio de 20px */
+    max-width: 900px; /* Defina o valor desejado para limitar a largura do background */
+    margin-left: auto; /* Centraliza o elemento horizontalmente */
+    margin-right: auto; /* Centraliza o elemento horizontalmente */
+
+    position: absolute;
+    top: 30%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+
+    
 }
 
-.expert img {
-    width: 100px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-}
-
-/* Estilo para a seção de Depoimentos */
-.testimonial {
-    display: flex;
-    margin-bottom: 20px;
-}
-
-.testimonial img {
-    width: 50px;
-    border-radius: 50%;
-    margin-right: 10px;
-}
-
-.testimonial p {
-    margin-bottom: 0;
-}
-
-
-/* Adicione este bloco no final do seu arquivo styles.css */
-#contact {
+.intro-text2 {
+    background-color: #12181d; /* Fundo rosa pálido */
     text-align: center;
+    padding: 50px; /* Espaçamento interno de 20px em todas as direções */
+    opacity: 0;
+    animation: slideUp 1s ease-in-out 0.5s forwards;
+    border-radius: 15px; /* Adiciona cantos arredondados à caixa com um raio de 20px */
+    max-width: 1470px; /* Defina o valor desejado para limitar a largura do background */
+    margin-left: auto; /* Centraliza o elemento horizontalmente */
+    margin-right: auto; /* Centraliza o elemento horizontalmente */
+
+    position: absolute;
+    top: 115%;
+    right: 5%;
+    left: 5%;
+    transform: translate(-50%, -50%);
+
+    
 }
 
-#contact form {
-    display: inline-block;
-    text-align: left;
-    max-width: 400px; /* Ajuste a largura máxima conforme necessário */
-    width: 100%;
+
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
-#contact form label {
-    display: block;
-    margin-bottom: 5px;
+/* Estilos para o texto dentro de intro-text */
+.intro-text h1 {
+    color: #e0eff3f1;
+    font-weight: bold;
+    font-size: 40px; /* Ajuste o tamanho do texto conforme necessário */
+    margin-bottom: 20px; /* Adiciona uma margem inferior de 15px */
+    text-shadow: 5px 5px 9px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra suave ao texto para destacá-lo */
 }
 
-#contact form input,
-#contact form textarea {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 15px;
+.intro-text p {
+    color: #000000;
+    font-size: 26px; /* Ajuste o tamanho do texto conforme necessário */
+    text-shadow: 50px 2px 4px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra suave ao texto para destacá-lo */
 }
 
-#contact form button {
-    width: 100%;
-    padding: 10px;
-    background-color: #26272e;
-    color: #fff;
-    border: none;
-    cursor: pointer;
+
+/* Estilos para o texto dentro de intro-text2 */
+.intro-text2 h1 {
+    color: #dededff1;
+    font-weight: bold;
+    font-size: 25px; /* Ajuste o tamanho do texto conforme necessário */
+    margin-bottom: 25px; /* Adiciona uma margem inferior de 15px */
+    text-shadow: 5px 5px 9px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra suave ao texto para destacá-lo */
 }
 
-#contact form button:hover {
-    background-color: rgb(207, 132, 18);
+.intro-text2 p {
+    color: #27c0db;
+    font-size: 18px; /* Ajuste o tamanho do texto conforme necessário */
+    text-shadow: 50px 2px 4px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra suave ao texto para destacá-lo */
+}
+
+
+/* Estilos para a navegação em telas pequenas */
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Oculta a lista de menu por padrão */
+        text-align: center;
+        width: 100%;
+        position: absolute;
+        top: 60px; /* Altura do cabeçalho */
+        background-color: #06090c;
+    }
+
+    nav ul.show {
+        display: block; /* Mostra a lista de menu quando a classe 'show' é adicionada */
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+    }
 }

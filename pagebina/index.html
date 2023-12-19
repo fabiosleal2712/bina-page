@@ -7,14 +7,14 @@
     <title>Binario Soluções</title>
 </head>
 <body>
-
     <header>
         <div class="header-content">
             <img class="logo" src="img/logo.png" alt="Sua Logo">
+            <div class="menu-toggle" onclick="toggleMenu()">Menu</div>
             <nav>
                 <ul>
-                    <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#methodology">Metodologia</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#experts">Especialistas</a></li>
                     <li><a href="#testimonials">Depoimentos</a></li>
                 </ul>
@@ -22,73 +22,21 @@
         </div>
     </header>
 
-    <section id="portfolio">
-        <h2>Portfolio</h2>
-        <img src="img/portifolio.png" alt="Imagem do Portfólio">
-        <p>Texto sobre o portfólio. Descreva seus projetos e realizações aqui.</p>
-    </section>
-    
-    <!-- Restante do seu conteúdo... -->
+    <div class="intro-text">
+        <h1>Protegendo o que mais importa para os empresários</h1>
+        <p>A segurança dos dados é uma das maiores preocupações dos empresários modernos, e estamos aqui para ajudar a enfrentar esse desafio.</p>
+    </div>
 
-</body>
-</html>
-    
-    
-    <section id="methodology">
-        <h2>Metodologia</h2>
-        <img src="img/methodology-image.jpg" alt="Imagem da Metodologia">
-        <p>Texto sobre a metodologia. Explique o processo e abordagens utilizadas.</p>
-    </section>
+    <div class="intro-text2">
+        <h1>Deixe o passado para trás e abrace o futuro na nuvem! </h1>
+        <p>Descubra uma era de possibilidades ilimitadas, onde a inovação é constante e as barreiras são superadas. Não fique preso ao que já foi, venha para a nuvem e transforme sua jornada..</p>
+    </div>
 
-    <section id="experts">
-        <h2>Especialistas</h2>
-        <div class="expert">
-            <img src="img/expert1.jpg" alt="Especialista 1">
-            <p>Texto sobre o Especialista 1. Descreva suas habilidades e experiência.</p>
-        </div>
-        <div class="expert">
-            <img src="img/expert2.jpg" alt="Especialista 2">
-            <p>Texto sobre o Especialista 2. Descreva suas habilidades e experiência.</p>
-        </div>
-        <!-- Adicione mais especialistas conforme necessário -->
-    </section>
-
-
-    <section id="testimonials">
-        <h2>Depoimentos</h2>
-        <div class="testimonial">
-            <img src="img/logotipods2.jpg" alt="DS2" onclick="window.location.href='https://ds2consultoria.com.br/'">
-            <p>Depoimento do Cliente 1. O que eles têm a dizer sobre nós.</p>
-        </div>
-        <div class="testimonial">
-            <img src="img/Logo-Soluzione-compact.png" alt="Soluzione" onclick="window.location.href='https://www.soluzionecontabil.com.br/'">
-            <p>Depoimento do Cliente 2. O que eles têm a dizer sobre nós.</p>
-        </div>
-        <div class="testimonial">
-            <img src="img/prezzo-logo.png" alt="Prezzo" onclick="window.location.href='https://prezzocontabil.com.br/'">
-            <p>Depoimento do Cliente 3. O que eles têm a dizer sobre nós.</p>
-        </div>
-    </section>
-    
-
-    <section id="contact">
-        <h2>Contato</h2>
-        <form action="processar-formulario.php" method="post">
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="assunto">Assunto:</label>
-            <input type="text" id="assunto" name="assunto" required>
-
-            <label for="mensagem">Mensagem:</label>
-            <textarea id="mensagem" name="mensagem" required></textarea>
-
-            <button type="submit">Enviar</button>
-        </form>
-    </section>
-
+    <script>
+        function toggleMenu() {
+            var nav = document.querySelector('.header-content nav');
+            nav.classList.toggle('show');
+        }
+    </script>
 </body>
 </html>
