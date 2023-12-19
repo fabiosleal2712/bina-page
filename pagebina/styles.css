@@ -42,10 +42,6 @@ nav ul li a {
     font-size: 18px;
 }
 
-body {
-    background-color: #12181d; /* Fundo azul escuro */
-    margin: 0; /* Remove margens padrão do body */
-}
 
 
 /* Adicionando Media Queries para responsividade */
@@ -88,44 +84,10 @@ body {
     }
 }
 
-/* Estilos para a intro-text */
-.intro-text {
-    background-color: #285f8b; /* Fundo rosa pálido */
-    text-align: center;
-    padding: 50px; /* Espaçamento interno de 20px em todas as direções */
-    opacity: 0;
-    animation: slideUp 1s ease-in-out 0.5s forwards;
-    border-radius: 15px; /* Adiciona cantos arredondados à caixa com um raio de 20px */
-    max-width: 900px; /* Defina o valor desejado para limitar a largura do background */
-    margin-left: auto; /* Centraliza o elemento horizontalmente */
-    margin-right: auto; /* Centraliza o elemento horizontalmente */
 
-    position: absolute;
-    top: 30%;
-    left: 25%;
-    transform: translate(-50%, -50%);
-
-    
-}
-
-.intro-text2 {
-    background-color: #12181d; /* Fundo rosa pálido */
-    text-align: center;
-    padding: 50px; /* Espaçamento interno de 20px em todas as direções */
-    opacity: 0;
-    animation: slideUp 1s ease-in-out 0.5s forwards;
-    border-radius: 15px; /* Adiciona cantos arredondados à caixa com um raio de 20px */
-    max-width: 1470px; /* Defina o valor desejado para limitar a largura do background */
-    margin-left: auto; /* Centraliza o elemento horizontalmente */
-    margin-right: auto; /* Centraliza o elemento horizontalmente */
-
-    position: absolute;
-    top: 115%;
-    right: 5%;
-    left: 5%;
-    transform: translate(-50%, -50%);
-
-    
+body {
+    background-color: #010713; /* Fundo azul escuro */
+    margin: 0; /* Remove margens padrão do body */
 }
 
 
@@ -141,9 +103,30 @@ body {
     }
 }
 
-/* Estilos para o texto dentro de intro-text */
+
+/* Estilos para a intro-text */
+.intro-text {
+    background-color: #103377; /* Fundo rosa pálido */
+    text-align: center;
+    padding: 50px; /* Espaçamento interno de 20px em todas as direções */
+    opacity: 0;
+    animation: slideUp 1s ease-in-out 0.5s forwards;
+    border-radius: 15px; /* Adiciona cantos arredondados à caixa com um raio de 20px */
+    max-width: 1200px; /* Defina o valor desejado para limitar a largura do background */
+    margin-left: auto; /* Centraliza o elemento horizontalmente */
+    margin-right: auto; /* Centraliza o elemento horizontalmente */
+
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    right: 10%;
+    transform: translate(-50%, -50%);
+
+    
+}
+
 .intro-text h1 {
-    color: #e0eff3f1;
+    color: #000000;
     font-weight: bold;
     font-size: 40px; /* Ajuste o tamanho do texto conforme necessário */
     margin-bottom: 20px; /* Adiciona uma margem inferior de 15px */
@@ -158,17 +141,37 @@ body {
 
 
 /* Estilos para o texto dentro de intro-text2 */
+
+.intro-text2 {
+    background-color: #010713; /* Fundo rosa pálido */
+    padding: 50px; /* Espaçamento interno de 20px em todas as direções */
+    opacity: 0;
+    animation: slideUp 1s ease-in-out 0.5s forwards;
+    border-radius: 15px; /* Adiciona cantos arredondados à caixa com um raio de 20px */
+    max-width: 500px; /* Defina o valor desejado para limitar a largura do background */
+    margin-left: auto; /* Centraliza o elemento horizontalmente */
+    margin-right: auto; /* Centraliza o elemento horizontalmente */
+
+    position: absolute;
+    top: 115%;
+    left: 1%;
+    transform: translate(-50%, -50%);
+
+    
+}
 .intro-text2 h1 {
-    color: #dededff1;
+    color: #dbdbe6f1;
     font-weight: bold;
-    font-size: 25px; /* Ajuste o tamanho do texto conforme necessário */
+    font-size: 35px; /* Ajuste o tamanho do texto conforme necessário */
     margin-bottom: 25px; /* Adiciona uma margem inferior de 15px */
+    text-align: left;
     text-shadow: 5px 5px 9px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra suave ao texto para destacá-lo */
 }
 
 .intro-text2 p {
-    color: #27c0db;
+    color: #737583;
     font-size: 18px; /* Ajuste o tamanho do texto conforme necessário */
+    text-align: left;
     text-shadow: 50px 2px 4px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra suave ao texto para destacá-lo */
 }
 
@@ -193,4 +196,41 @@ body {
         font-size: 24px;
         cursor: pointer;
     }
+}
+
+
+/* Adicione estas regras ao final do seu arquivo styles.css */
+
+.methodology-section {
+    position: absolute; /* ou 'absolute', dependendo da necessidade */
+    bottom: 0;
+    top: 150%; /* Isso pode ser ajustado conforme necessário */
+    right: 25%;
+    background-color: #fff; /* Ajuste a cor de fundo conforme necessário */
+    margin: 10%;
+    z-index: 1; /* Para garantir que a seção fique sobre outros elementos, se necessário */
+}
+
+
+.methodology-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.methodology-column {
+    flex: 1;
+    margin: 0 20px;
+    text-align: left;
+}
+
+.methodology-column h2 {
+    color: #fff;
+    font-size: 28px;
+}
+
+.methodology-column p {
+    color: #ccc;
+    font-size: 16px;
+    line-height: 1.5;
 }
