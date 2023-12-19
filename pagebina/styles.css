@@ -199,18 +199,12 @@ body {
 }
 
 
+
 /* Adicione estas regras ao final do seu arquivo styles.css */
 
 .methodology-section {
-    position: absolute; /* ou 'absolute', dependendo da necessidade */
-    bottom: 0;
-    top: 150%; /* Isso pode ser ajustado conforme necessário */
-    right: 25%;
-    background-color: #fff; /* Ajuste a cor de fundo conforme necessário */
-    margin: 10%;
-    z-index: 1; /* Para garantir que a seção fique sobre outros elementos, se necessário */
+    position: relative; /* Adiciona posição relativa ao elemento pai */
 }
-
 
 .methodology-content {
     display: flex;
@@ -218,19 +212,55 @@ body {
     justify-content: space-around;
 }
 
-.methodology-column {
+.methodology-text {
     flex: 1;
     margin: 0 20px;
     text-align: left;
+    background-color: #c96f09;
+    padding: 20px; /* Adiciona algum espaçamento interno */
+    border-radius: 20px; /* Adiciona cantos arredondados */
+    box-shadow: 4 8px 16px #000000; /* Adiciona uma sombra suave */
 }
 
-.methodology-column h2 {
+.methodology-text h2 {
     color: #fff;
     font-size: 28px;
 }
 
-.methodology-column p {
+.methodology-text p {
     color: #ccc;
     font-size: 16px;
     line-height: 1.5;
+}
+
+/* Mova a seção "Metodologia" para baixo */
+#methodology1 {
+    top: 190%;
+    left: 5%;
+    position: absolute;
+    max-width: 500px;
+}
+
+/* Mova a seção "Metodologia" para baixo */
+#methodology2 {
+    top: 190%;
+    right: 5%;
+    position: absolute;
+    max-width: 500px;
+}
+
+/* Mova a seção "Metodologia" para baixo */
+#methodology3 {
+    top: 250%;
+    left: 5%;
+    position: absolute;
+    max-width: 500px;
+}
+
+/* Mova a seção "Metodologia" para baixo */
+#methodology4 {
+    top: 250%;
+    right: 5%;
+    position: absolute;
+    max-width: 500px;
 }

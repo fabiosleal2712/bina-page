@@ -1,60 +1,76 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Binario Soluções</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Binário Soluções - Em Construção</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #87CEFA; /* Azul claro */
+      text-align: center;
+      padding: 50px;
+      margin: 0;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    p {
+      color: #555;
+    }
+
+    .contact-info {
+      margin-top: 20px;
+    }
+
+    .contact-info p {
+      margin: 5px 0;
+    }
+
+    .contact-info a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+
+    .logo {
+      max-width: 200px;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <img class="logo" src="img/logo.png" alt="Sua Logo">
-            <div class="menu-toggle" onclick="toggleMenu()">Menu</div>
-            <nav>
-                <ul>
-                    <li><a href="#methodology">Metodologia</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#experts">Especialistas</a></li>
-                    <li><a href="#testimonials">Depoimentos</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <img src="img/logo.png" alt="Logo Binário Soluções" class="logo">
 
-    <div class="intro-text">
-        <h1>Protegendo o que mais importa para os empresários</h1>
-        <p>A segurança dos dados é uma das maiores preocupações dos empresários modernos, e estamos aqui para ajudar a enfrentar esse desafio.</p>
-    </div>
+  <h1>Binário Soluções - Em Construção</h1>
+  <p>Em breve estaremos online com novidades!</p>
 
-    <div class="intro-text2">
-        <div class="text-content">
-            <h1>Deixe o passado para trás.</h1>
-            <p>Descubra uma era de possibilidades ilimitadas, onde a inovação é constante e as barreiras são superadas. Não fique preso ao que já foi, venha para a nuvem e transforme sua jornada.</p>
-        </div>
-    </div>
+  <div class="contact-info">
+    <p>Email: <a href="mailto:comercial1@binariosolucoes.com.br">comercial1@binariosolucoes.com.br</a></p>
+    <p>WhatsApp: <a href="tel:+5521988557377">(21) 98855-7377</a></p>
+  </div>
 
-    <!-- Inserindo a seção "Metodologia" aqui, após o texto solicitado -->
-    <section id="methodology" class="methodology-section">
-        <div class="methodology-content">
-            <div class="methodology-column">
-                <h2>Coluna 1</h2>
-                <p>Conteúdo da coluna 1...</p>
-            </div>
-            <div class="methodology-column">
-                <h2>Coluna 2</h2>
-                <p>Conteúdo da coluna 2...</p>
-            </div>
-        </div>
-    </section>
+  <div>
+    <p>Data e Hora: <span id="datetime"></span></p>
+  </div>
 
-    <script>
-        function toggleMenu() {
-            var nav = document.querySelector('.header-content nav');
-            nav.classList.toggle('show');
-        }
-    </script>
+  <script>
+    function updateDateTime() {
+      var now = new Date();
+      var datetimeElement = document.getElementById('datetime');
+      datetimeElement.innerHTML = now.toLocaleString('pt-BR');
+    }
+
+    // Atualiza a data e hora a cada segundo
+    setInterval(updateDateTime, 1000);
+
+    // Atualiza a data e hora imediatamente ao carregar a página
+    updateDateTime();
+  </script>
 </body>
-
 </html>
